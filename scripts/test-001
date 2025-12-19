@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Local wrapper to run the package without installing to PATH.
+# Usage: ./scripts/test-001 --greet Alice
+
+python -m test_001.main "$@"
