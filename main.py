@@ -23,8 +23,17 @@ def greet(name: str = "World") -> str:
 
 def _main(argv: Any = None) -> int:
     parser = argparse.ArgumentParser(description="Simple test program")
-    parser.add_argument("--greet", nargs="?", const="World", help="Greet a name (default: World)")
-    parser.add_argument("--sum", nargs=2, help="Sum two integers")
+    parser.add_argument(
+        "--greet",
+        nargs="?",
+        const="World",
+        help="Greet a name (default: World)",
+    )
+    parser.add_argument(
+        "--sum",
+        nargs=2,
+        help="Sum two integers",
+    )
     args = parser.parse_args(argv)
 
     if args.greet is not None:
